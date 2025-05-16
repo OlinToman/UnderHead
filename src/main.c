@@ -51,6 +51,16 @@ int main(int argc, char *argv[])
     for (int i = 0; i < 20; i++)
     {
         items[i].id = 0;
+        items[i].in_use = false;
+        items[i].phealth = 0;
+        items[i].pmaxhealth = 0;
+        items[i].pattack = 0;
+        items[i].pdefense = 0;
+        for (int x = 0; x < 20; x++)
+        {
+            items[i].name[x] = 0;
+            itemlist[i].name[x] = 0;
+        }
     }
     OpenItem(itemlist);
     unsigned int points = 11;
